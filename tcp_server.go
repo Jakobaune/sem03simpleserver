@@ -44,8 +44,8 @@ func main() {
                     }
 
                     switch msg := string(buf[:n]); msg {
-                    case "ping":
-                        _, err = c.Write([]byte("pong"))
+                    case "Hei Sindre":
+                        _, err = c.Write([]byte("Hei Jakob"))
                     default:
                         dekryptertMelding := mycrypt.Krypter([]rune(string(buf[:n])), mycrypt.ALF_SEM03, len(mycrypt.ALF_SEM03)-4)
                         log.Println("Dekryptert melding: ", string(dekryptertMelding))
